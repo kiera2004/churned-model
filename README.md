@@ -1,4 +1,4 @@
-### 电商用户增长与价值分析：从全链路数据挖掘到 LTV 策略优化
+# 电商用户增长与价值分析：从全链路数据挖掘到 LTV 策略优化
 
 ## 项目背景
 本项目通过对电商平台用户、订单及品类的深度挖掘，构建了“价值分层 — 流失预测 — 渠道分析 — 同期群表现 — 品类价值矩阵 — 折扣影响评估”的分析全链路。
@@ -28,9 +28,9 @@ Product Summary表：品类维度的经营表现聚合。
 ## 2. 流失预测模型与归因分析 (Logistic Regression)
 **时间维度**：消费间隔越长，流失风险呈指数级上升。
 *建议*：
-*构建时间窗口自动召回*：针对未复购用户，在 **30 天、60 天、90 天** 三个关键节点设置自动触达（如个性化优惠券、场景化文案推送），打断沉默惯性。
-*低干预唤醒沉睡用户*：优先使用 **小额唤醒券、购物车降价提醒、节气关怀** 等轻量方式测试其反应，避免高成本让利。
-*启动老用户激活专项*：对注册 **2 年以上** 的老用户，策划“会员周年礼”“时光专属折扣”等情感化活动，强化归属感，延缓使用疲劳。
+（1）构建时间窗口自动召回：针对未复购用户，在30 天、60 天、90 天三个关键节点设置自动触达（如个性化优惠券、场景化文案推送），打断沉默惯性。
+（2）低干预唤醒沉睡用户：优先使用小额唤醒券、购物车降价提醒、节气关怀等轻量方式测试其反应，避免高成本让利。
+（3）启动老用户激活专项：对注册2 年以上的老用户，策划“会员周年礼”“时光专属折扣”等情感化活动，强化归属感，延缓使用疲劳。
 **渠道质量**：付费广告渠道用户流失风险显著高于直接获客，存在“低意向”问题。
 **反直觉发现**：高退货率在模型中体现为“活跃”信号，退货往往是高频交易的副产物。
 **等级差异**：Silver 会员流失风险最低，
@@ -46,11 +46,11 @@ Product Summary表：品类维度的经营表现聚合。
 
 ## 4. 同期群 (Cohort) 深度诊断报告
 通过对 2024-2025 年获客群的持续追踪，识别出三种典型的用户贡献模式：
-# 用户行为模式分类
+### 用户行为模式分类
 **模式一：健康增长型 (如 2024.10, 2025.08)** —— 留存、AOV、利润三高，拉新渠道与用户质量高度匹配。
 **模式二：流量型但转化弱 (如 2024.06-07)** —— 用户愿意复购但客单价低，多为促销敏感型用户。
 **模式三：高价值但留不住 (如 2025.01)** —— AOV 极高但留存差，多为电子产品等长决策周期品类的一次性消费。
-# 关键发现
+### 关键发现
 **“磨合期”效应**：用户在 M1-M5 波动剧烈，M6 之后行为趋于稳定，前6个月决定长期价值。
 *建议*：建议多阶段运营模型，M0-M3为关键养成期（建立复购习惯），M3-M6为价值稳定期（提升长期LTV）。
 **“高开低走”陷阱**：2024.10 Cohort 早期表现完美，但 M9-M12 表现垫底。
@@ -61,7 +61,7 @@ Product Summary表：品类维度的经营表现聚合。
 *建议*：需排查当时是否存在技术故障或严重物流中断。
 
 ## 5. 品类价值矩阵 (Category Matrix)
-通过四象限矩阵将分析从“人”下沉到“货”
+通过四象限矩阵将分析从“人”下沉到“货”。
 **Electronics (核心支柱)**：利润占比达 37%，是收入引擎。
 *建议*：巩固优势，加大售后链路优化与满意度管理，降低高客单退货损失。
 **Travel & Luggage (高潜力)**：单价极高且运营效率领先，但利润占比仅 3%。
@@ -70,7 +70,7 @@ Product Summary表：品类维度的经营表现聚合。
 *建议*：立即审查供应链效率与客户投诉，评估淘汰长期负毛利 SKU 或重构选品标准。
 
 ## 6. 折扣效果深度评估 (2020-2026)
-通过长达 6 年的月度数据同比趋势，揭示了折扣策略的真实效果：
+通过长达 6 年的月度数据同比趋势，揭示了折扣策略的真实效果。
 **利润挤压**：折扣与利润呈现“弱负相关”，提高折扣虽能刺激短期销量，但显著压缩了盈利空间。
 **深度不足**：折扣对提升客单价(AOV)和销售件数(item)的作用不明显，用户并未因为打折而买得更多。
 **核心洞察**：目前的折扣更多是“流量型促销”，未能有效转化成长期用户价值。
@@ -86,12 +86,18 @@ Product Summary表：品类维度的经营表现聚合。
 
 ## Tableau Dashboard
 👉[cluster分析](https://public.tableau.com/views/cluster_17788383068860/1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+![dashboard](cluster分析.png)
 👉[cohort分析](https://public.tableau.com/views/cohort_17788387818190/1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+![dashboard1](cohort分析.png)
+![dashboard2](cohort热力图.png)
+![dashboard3](cumulative_ltv.png)
 👉[品类价值矩阵](https://public.tableau.com/views/_17788389325870/1_1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+![dashboard](品类价值矩阵.png)
 👉[折扣分析](https://public.tableau.com/views/discount_17788389564210/1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+![dashboard](折扣分析.png)
 
 ## 技术栈
-**数据处理**：Python (Pandas, Numpy), Excel
-**建模分析**：K-Means (聚类), Logistic Regression (流失归因)
-**可视化**：Tableau (Cohort Heatmap, LTV Curves), Matplotlib/Seaborn
-**数据库**：Sql
+**数据处理：** Python (Pandas, Numpy), Excel
+**建模分析：** K-Means (聚类), Logistic Regression (流失归因)
+**可视化：** Tableau (Cohort Heatmap, LTV Curves), Matplotlib/Seaborn
+**数据库：** Sql
